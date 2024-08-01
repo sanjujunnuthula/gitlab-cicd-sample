@@ -1,0 +1,15 @@
+test:
+  stage: test
+  script:
+    - echo "Deploying application intially..."
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying test application..."
+
+.post :
+  stage: post deploy
+  script:
+    - echo "Post Deployed"
+
